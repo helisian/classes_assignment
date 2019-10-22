@@ -138,3 +138,52 @@
 // }
 // let brady = new Dog ("brady", "german shepherd", "happy", true)
 // console.log(brady.toString())
+
+
+// QUESTION 4 a, b and c
+
+let freezingPoint = {
+    celsius : 0,
+    farenheit : 32, 
+    kelvin : 273
+}
+console.log(freezingPoint)
+
+class Celsius {
+    constructor (celsius){
+        this.celsius = celsius
+    }
+    getFahrenheitTemp(){
+    return 1.8 * this.celsius + 32
+    }
+    getKelvinTemp(){
+    return this.celsius + 273
+    }
+    isBelowFreezing(){
+    if (this.celsius < freezingPoint){
+        return true
+        } else{
+            return false
+        }
+    }
+}
+let outside = new Celsius(10.0)
+console.log(outside.getFahrenheitTemp())
+console.log(outside.getKelvinTemp())
+console.log(outside.isBelowFreezing())
+
+// QUESTION 5
+class Movie {
+    constructor(name, year, genre, cast, description){
+    this.name = name
+    this.year = year
+    this.genre = genre
+    this.cast = cast 
+    this.description = description 
+    }
+    blurb(){
+    return this.name + " came out in " + this.year + " It was a " + this.genre + " movie starring " + this.cast + " about a " + this.description
+    }
+}
+let joker = new Movie("Joker", 2019, "horror", "joaquin pheonix", "killer clown")
+console.log(joker.blurb())
